@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- salas de firebase -->
+	<title>Kwitter Salas</title>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+	<!-- fuentes de gogle -->
+	<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<!-- style,css -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="module">
+		// Import the functions you need from the SDKs you need
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";</script>
+</head>
+
+<body>
+	<div class="container">
+		<!--Añade la función onclick logout() para el botón de salir.-->
+		<button id="logout" onclick="logout();" class="glyphicon glyphicon-log-out btn btn-danger">Salir</button>
+
+		<center>
+			<h1 class="header">
+				Kwitter
+				<sup>
+					<img src="m2.png">
+				</sup>
+			</h1>
+			<!--2. Ahora añade id="user_name"
+Esta etiqueta se utiliza para el nombre del usuario:-->
+			<h3 id="user_name" class="color_white"></h3>
+
+			<div class="form-group input_div_room_page">
+				<label>#Añadir sala:</label>
+
+				<!--añade un cuadro de entrada para añadir el nombre de la sala:
+-->
+				<input type="text" id="room_name" class="form-control" placeholder="#Nombre de la sala">
+
+			</div>
+
+			<!--Ahora añade la función onclick addRoom() al botón para añadir una sala-->
+			<button onclick="addRoom();" class="btn btn-success">#Crear sala</button>
+			<h3 class="color_white">#SALASDETENDENCIA</h3>
+
+			<!--Ahora, añade un div con id=”output”. Esta etiqueta div se utiliza para los
+nombres de las salas.
+-->
+			<div id="output" style="text-align: left;margin-bottom: 70px;"> </div>
+
+		</center>
+	</div>
+	<script src="kwitter_room.js"></script>
+</body>
+
+</html>
